@@ -7,4 +7,4 @@ var fuelRequired =
         moduleMass.toInt() / 3 - 2
     }.sum()
 
-print("Fuel requirement: $fuelRequired")
+println("Fuel requirement: $fuelRequired")

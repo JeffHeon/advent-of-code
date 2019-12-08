@@ -7,7 +7,7 @@ var fuelRequired =
         moduleFuel(moduleMass.toInt())
     }.sum()
 
-print("Fuel requirement: $fuelRequired")
+println("Fuel requirement: $fuelRequired")
 
 fun moduleFuel(moduleMass: Int): Int {
     tailrec fun fuel(mass: Int, totalFuel: Int): Int {
