@@ -4,7 +4,7 @@ Some solutions to some days of [Advent of Code 2019](https://adventofcode.com/20
 
 Using Kotlin _scripts_, although I developed them using an IDE.
 
-Hats off to darvs, who game me some tricks and tips for command line usage.
+Hats off to [darvs](https://github.com/darvs), who game me some tricks and tips for command line usage.
 
 ### Executing on MacOS
 
