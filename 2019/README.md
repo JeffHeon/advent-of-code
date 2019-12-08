@@ -14,7 +14,7 @@ Install Kotlin with brew:
 Given a script name `puzzle1.kts`, execute so:
 `kotlinc -script puzzle1.kts`
 
-**Note: I was using `print` at first, but the line wasn't written. I had to changed to `println``**
+**Note: I was using `print` at first, but the line wasn't written. I had to changed to `println`**
 
 ### Environment
 Tested on MacOS 10.15.1 with Kotlin version 1.3.61 (JRE 1.8.0_25-b17)
