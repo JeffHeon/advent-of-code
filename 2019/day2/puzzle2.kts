@@ -11,8 +11,8 @@ class IntcodeComputer {
         operation: (Int, Int) -> Int
     ) {
         val parameter1 = memory[dereference(position + 1)]
-        val b = memory[dereference(position + 2)]
-        memory[dereference(position + 3)] = operation(parameter1, b)
+        val parameter2 = memory[dereference(position + 2)]
+        memory[dereference(position + 3)] = operation(parameter1, parameter2)
     }
 
     fun loadProgram(program: List<Int>) {
