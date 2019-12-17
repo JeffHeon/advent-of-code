@@ -40,7 +40,7 @@ data class Segment(val start: Point, val end: Point)
 // We posit the central central port is located at 0,0.
 fun wireSegments(wirePath: List<String>): List<Segment> {
     val moves = wirePath.map { token -> Move(token.first(), token.drop(1).toInt()) }
-    var segments = mutableListOf<Segment>()
+    val segments = mutableListOf<Segment>()
     var currentPosition = Point(0, 0)
     moves.forEach { move ->
         val delta = when (move.direction) {
@@ -81,13 +81,13 @@ fun closestIntersection(wirePath1: List<String>, wirePath2: List<String>): Point
 fun wireIntersections(wireSegments1: List<Segment>, wireSegments2: List<Segment>): List<Point> {
     val (verticals1, horizontals1) = splitVerticalsHorizontals(wireSegments1)
     val (verticals2, horizontals2) = splitVerticalsHorizontals(wireSegments2)
-    val intersections1: List<Point> = intersections(verticals1, horizontals1)
-    val intersections2: List<Point> = intersections(verticals2, horizontals2)
+    val intersections1: List<Point> = intersections(verticals1, horizontals2)
+    val intersections2: List<Point> = intersections(verticals2, horizontals1)
 
     return intersections1 + intersections2
 }
 
-fun splitVerticalsHorizontals(wireSegments1: List<Puzzle1.Segment>) =
+fun splitVerticalsHorizontals(wireSegments1: List<Segment>) =
     wireSegments1.partition { it.start.x == it.end.x }
 
 fun intersections(verticals: List<Segment>, horizontals: List<Segment>): List<Point> {
@@ -97,7 +97,7 @@ fun intersections(verticals: List<Segment>, horizontals: List<Segment>): List<Po
 fun intersection(vertical: Segment, horizontal: Segment): Point? {
     val rangeX = range(horizontal.start.x, horizontal.end.x)
     if (vertical.start.x in rangeX) {
-        val rangeY = range(horizontal.start.y, horizontal.end.y)
+        val rangeY = range(vertical.start.y, vertical.end.y)
         if (horizontal.start.y in rangeY) {
             return Point(vertical.start.x, horizontal.start.y)
         }
@@ -111,8 +111,7 @@ fun intersection(vertical: Segment, horizontal: Segment): Point? {
 fun range(a: Int, b: Int) = if (a < b) a..b else b..a
 
 // The actual program
-//val input = File("input").readLines()
-val input = listOf("R8,U5,L5,D3", "U7,R6,D4,L4")
+val input = File("input").readLines()
 val wirePath1 = input.first().split(",")
 val wirePath2 = input.second().split(",")
 
