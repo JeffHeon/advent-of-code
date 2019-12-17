@@ -16,6 +16,8 @@ fun <T> List<T>.rest(): List<T> {
     return this.subList(1, size)
 }
 
+fun String.rest(): String = drop(1)
+
 data class Point(val x: Int, val y: Int)
 
 operator fun Point.plus(delta: Point) = Point(x + delta.x, y + delta.y)
@@ -39,7 +41,7 @@ data class Segment(val start: Point, val end: Point)
 // (x increasing going right and y increasing going up.)
 // We posit the central central port is located at 0,0.
 fun wireSegments(wirePath: List<String>): List<Segment> {
-    val moves = wirePath.map { token -> Move(token.first(), token.drop(1).toInt()) }
+    val moves = wirePath.map { token -> Move(token.first(), token.rest().toInt()) }
     val segments = mutableListOf<Segment>()
     var currentPosition = Point(0, 0)
     moves.forEach { move ->
