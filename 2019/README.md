@@ -9,11 +9,24 @@ Hats off to [darvs](https://github.com/darvs), who game me some tricks and tips 
 ### Executing on MacOS
 
 Install Kotlin with brew:
+
 `brew install kotlin`
 
 Given a script name `puzzle1.kts`, execute so:
+
 `kotlinc -script puzzle1.kts`
 
+Starting day 4 star 2, I am using a regular Kotlin file because I have problem debugging scripts.
+
+You can run inside an IDE, or go through this cumbersome two-steps process on a command line.
+
+```
+kotlinc puzzle.kt -include-runtime -d uber.jar
+java -jar uber.jar
+```
+ 
+On the plus side, this allows sharing my _Jeff_ extensions across days.
+ 
 **Note: I was using `print` at first, but the line wasn't written. I had to changed to `println`**
 
 ### Environment

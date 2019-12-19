@@ -40,7 +40,7 @@ fun hasAtLeastTwoIdenticalDigits(digits: List<Int>): Boolean {
 }
 
 fun digitsDoNotDecrease(digits: List<Int>): Boolean {
-    return !digits.windowed(2, 1).any { pair ->  pair.first() > pair.second() }
+    return !digits.windowed(2, 1).any { pair -> pair.first() > pair.second() }
 }
 
 fun digitize(number: Int) = number.toString().toList().map { it.toInt() }
