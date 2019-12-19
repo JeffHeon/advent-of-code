@@ -1,7 +1,5 @@
 package day4
 
-import jeff.second
-
 fun main() {
     val range = 172851..675869
     val eligibleCount = range.count { eligiblePassword(it) }
@@ -27,3 +25,7 @@ fun digitsDoNotDecrease(digits: List<Int>): Boolean {
 }
 
 fun digitize(number: Int) = number.toString().toList().map { it.toInt() }
+
+fun <E> List<E>.second(): E {
+    return this[1]
+}

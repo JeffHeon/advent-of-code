@@ -24,9 +24,7 @@ You can run inside an IDE, or go through this cumbersome two-steps process on a 
 kotlinc puzzle.kt -include-runtime -d uber.jar
 java -jar uber.jar
 ```
- 
-On the plus side, this allows sharing my _Jeff_ extensions across days.
- 
+
 **Note: I was using `print` at first, but the line wasn't written. I had to changed to `println`**
 
 ### Environment
