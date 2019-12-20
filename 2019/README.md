@@ -25,6 +25,8 @@ kotlinc puzzle.kt -include-runtime -d uber.jar
 java -jar uber.jar
 ```
 
+Or *Kottle it!*, using this simple [Bash Script](kottle.sh).
+
 **Note: I was using `print` at first, but the line wasn't written. I had to changed to `println`**
 
 ### Environment
