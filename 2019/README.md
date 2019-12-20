@@ -27,7 +27,7 @@ java -jar uber.jar
 
 Or *Kottle it!*, using this simple [Bash Script](kottle.sh).
 
-**Note: I was using `print` at first, but the line wasn't written. I had to changed to `println`**
+**Note: I was using `print` at first, but the line wasn't written. I had to change to `println`**
 
 ### Environment
 Tested on macOS 10.15.1 with Kotlin version 1.3.61 (JRE 1.8.0_25-b17)
