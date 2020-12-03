@@ -7,7 +7,7 @@ input=raw_input.map { |s| s.to_i }
 numbers2020 = []
 last_index = input.length - 1
 for i in 0..(last_index-1) do
-    for j in (i-1)..last_index do
+    for j in (i+1)..last_index do
         if input[i] + input[j] == 2020
             numbers2020 = [input[i], input[j]]
         end    
