@@ -1,3 +1,5 @@
+# Tested on macos with Ruby 2.6.3p62
+
 raw_input = File.read("input").split
 
 input=raw_input.map { |s| s.to_i }
