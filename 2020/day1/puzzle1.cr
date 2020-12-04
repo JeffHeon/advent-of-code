@@ -5,10 +5,10 @@ raw_input = File.read("input").split
 input=raw_input.map { |s| s.to_i }
 
 numbers2020 = [] of Int32
-last_index = input.size
+last_index = input.size-1
 
 (0..last_index-1).each do |i|
-    (i+1..last_index-1).each do |j|
+    (i+1..last_index).each do |j|
         if input[i] + input[j] == 2020
             numbers2020 = [input[i], input[j]]
         end    
