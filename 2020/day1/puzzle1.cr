@@ -1,6 +1,7 @@
 # Tested on macos with Crystal 0.35.1 (2020-06-19)
 
-raw_input = File.read("input").split
+# root relative path for execution with repl.it
+raw_input = File.read("./2020/day1/input").split
 
 input=raw_input.map { |s| s.to_i }
 

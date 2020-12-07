@@ -1,0 +1,5 @@
+# BFFFBBFRRR: row 70, column 7, seat ID 567.
+# FFFBBBFRRR: row 14, column 7, seat ID 119.
+# BBFFBBFRLL: row 102, column 4, seat ID 820.
+
+# TODO!

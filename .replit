@@ -1,0 +1,7 @@
+# This conf can be adjusted to run the right puzzle
+
+# language = "crystal"
+# run = "crystal 2020/day1/puzzle1.cr"
+
+language = "ruby"
+run = "ruby 2020/day1/puzzle1.rb"
