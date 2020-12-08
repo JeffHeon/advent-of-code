@@ -8,7 +8,7 @@ def valid?(password_with_scheme)
   count = tokens[:password].count tokens[:letter]
   at_least = tokens[:at_least].to_i
   at_most = tokens[:at_most].to_i
-  return count >= at_least && count <= at_most
+  return (count >= at_least) & (count <= at_most)
 end
 
 # root relative path for execution with repl.it
