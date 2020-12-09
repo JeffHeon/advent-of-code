@@ -4,4 +4,4 @@
 # run = "crystal 2020/day1/puzzle1.cr"
 
 language = "ruby"
-run = "ruby 2020/day3/puzzle3.rb"
+run = "ruby 2020/day3/puzzle3b.rb"
